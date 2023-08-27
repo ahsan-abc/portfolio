@@ -1,8 +1,11 @@
 const express = require ('express')
 const mongoose = require('mongoose');
-const DB = 'mongodb+srv://portfolio:Ahsan123&&&portfolio@cluster0.myskyxj.mongodb.net/portfolio?retryWrites=true&w=majority'
 const  cors = require('cors')
 const bodyparser = require('body-parser');
+const dotenv = require('dotenv');
+dotenv.config();
+
+console.log(process.env.DB_KEY)
 
 const app = express()
 //<-------middleware-----------> 
@@ -15,7 +18,7 @@ main().catch(err => console.log(err));
 
 async function main() {
     // await mongoose.connect('mongodb://127.0.0.1:27017/portfolio');
-    await mongoose.connect(DB);
+    await mongoose.connect(process.env.DB_KEY);
     console.log("connected to mongodb")
 
 }
@@ -78,7 +81,7 @@ app.post('/admin-lock', (req, res) =>
 
     console.log(req.body.user)
     var Key = [""]
-    if (req.body.user == "ahsan" && req.body.password == "ahsan_pass")
+    if (req.body.user == process.env.USER && req.body.password == process.env.PASSWORD)
     {
         
         console.log('pass')
