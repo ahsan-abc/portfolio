@@ -5,7 +5,7 @@ const bodyparser = require('body-parser');
 const dotenv = require('dotenv');
 dotenv.config();
 
-console.log(process.env.DB_KEY)
+
 
 const app = express()
 //<-------middleware-----------> 
