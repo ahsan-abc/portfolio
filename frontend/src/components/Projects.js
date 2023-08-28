@@ -1,20 +1,23 @@
-import React, { createElement, useEffect, useState } from 'react'
-import img from '../media/yo.JPG'
+import React, {  useEffect, useState } from 'react';
+
 
 function Projects() {
 
-  var bool = true;
+
   const [load, Setload] = useState('loading...')
+
   useEffect(() => {
-    const url = "http://localhost:8000/projects";
     
 
+    const url = `${process.env.REACT_APP_SERVER_URL}projects`;
+    
+   
       const fetchData = async () => {
           try {
             const response = await fetch(url);
             const a = await response.text();
             const b = await JSON.parse(a);
-            if (bool == true) {
+          
               document.getElementsByClassName('projects')[0].innerHTML = "";
               for (var i = b.length-1; i >-1; i--) {
                 const el = document.createElement('a');
@@ -26,18 +29,16 @@ function Projects() {
 
 
               }
-              bool = false;
-            }
+        
          
             
           } catch (error) {
       
-            if (bool == true) {
+          
        
               console.log(error);
-            Setload('error:check your internet...')
-              bool= false;
-            }
+            Setload('Error : check your internet...')
+        
 
 
           }
@@ -48,7 +49,12 @@ function Projects() {
 
     return (
       <main className='projects'>
-        <p>{load}</p>
+        
+        <p>
+          {load}
+          <p></p>
+        </p>
+        
       </main>
     )
 }

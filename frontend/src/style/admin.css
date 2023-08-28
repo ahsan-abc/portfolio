@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .lock , .sub_projects , .sub_skills
@@ -11,6 +13,7 @@
     width: 100%;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -19,7 +22,7 @@
     
 }
 
-.lock>input , .sub_projects>input , .sub_skills>input
+.lock>input , .sub_projects>input , .sub_skills>input 
 {
     margin: 10px 0 ;
     border-radius: 10px;
@@ -28,6 +31,19 @@
 
     width: 340px;
     max-width: 70%;
+    border-color: greenyellow;
+
+}
+ .sub_skills>textarea
+{
+    margin: 10px 0 ;
+    border-radius: 10px;
+    height: 200px;
+    padding:0  10px;
+
+    width: 340px;
+    max-width: 70%;
+    border-color: rgb(153, 255, 0);
 
 }
 

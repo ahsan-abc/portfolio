@@ -17,7 +17,7 @@ function Admin()
 
             const obj = { user: user, password: password }
 
-            var res = await fetch('http://localhost:8000/admin-lock', {
+            var res = await fetch(`${process.env.REACT_APP_SERVER_URL}admin-lock`, {
                 method: 'POST',
                 body: JSON.stringify(obj),
                 headers: {
@@ -57,7 +57,7 @@ function Admin()
         const view = adm_chil.value;
 
         const obj = { name: name, image: image, date: date, technology: technology, view: view, };
-        var res = await fetch('http://localhost:8000/sub-project', {
+        var res = await fetch(`${process.env.REACT_APP_SERVER_URL}sub-project`, {
             method: 'POST',
             body: JSON.stringify(obj),
             headers: {
@@ -90,7 +90,7 @@ function Admin()
        
 
       const   obj = { name: name, image: image, about: about };
-        var res = await fetch('http://localhost:8000/sub-skill', {
+        var res = await fetch(`${process.env.REACT_APP_SERVER_URL}sub-skill`, {
             method: 'POST',
             body: JSON.stringify(obj),
             headers: {
@@ -135,9 +135,11 @@ function Admin()
             {/* <-----------sub_skills-----------> */}
             
             <div className='sub_skills'>
-           <input placeholder='skill about in 20 words'></input>
-            <input placeholder='skill image'></input>
-            <input placeholder='skill about'></input>
+     
+            <textarea placeholder='skill about in 20 words'></textarea>
+                <input placeholder='skill image'></input>
+          
+            <textarea placeholder='skill topic'></textarea>
             <button onClick={sub_skills}>Submit</button>
             <h2>{error3}</h2>
                 

@@ -53,7 +53,8 @@ box-shadow: 5px 5px 0px rgb(0, 0, 0) ;
 
 }
 
-.about>p >span{
+.about>p >span>a{
+    text-decoration: none;
 color:rgb(188, 230, 18);
 text-shadow: 2px 0 0px black , -2px 0 0 black, 0 2px 0 black , 0 -2px 0 black ;
     font-size: 1.5em;
@@ -111,13 +112,16 @@ width: 90%;
 
 .short>ul
 {
+
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
+   
     height: auto;
     width: 100%;
     flex-wrap: wrap;
+    margin: auto;
 }
 .short > div
 {
@@ -195,8 +199,10 @@ transition: transform 4s , background-color 4s ;
 
 /* short project */
 
-.short>ul>div
+
+.short>ul>a>div
 {
+ 
     
     width: 250px;
     height: 300px;
@@ -212,22 +218,28 @@ transition: transform 4s , background-color 4s ;
  overflow-x: hidden;
 }
 
-.short>ul>div>img
+.short>ul>a>div>img  
 {   
     border-radius: 10px;
     opacity: 90%;
     height: 100%;
+    width: 98%;
+  object-fit:cover;
+
 
     
     
 }
-.short>ul>p
+
+@media screen and (max-width:550px) {
+    .short>ul>p
 {
-    margin-right: 50%;
+  margin-right:50% ;
+}
+    
 }
 
-
-.short>ul>div:hover
+.short>ul>a>div:hover
 {
     transform: scale(1.1);
 }

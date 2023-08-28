@@ -6,18 +6,46 @@
     align-items: center;
     justify-content: center;
 }
-
 /* loading */
 .projects>p
 {
-    height: 70vh;
-    width: 100%;
-    margin: 35vh;
-    text-align: center;
-    color: rgb(145, 255, 0);
+    
+    width: 200px;
+   margin: 30vh auto;
+   text-align: center;
+   color: chartreuse;
+   
+
+
+
 
 }
-/* end loading */
+.projects>p>p
+{
+    height: 4px;
+   
+    margin: 2px auto;
+    background-color: chartreuse;
+    animation: rotate 3s infinite;
+    
+}
+
+@keyframes rotate {
+    0%{
+width: 0px;
+
+    }
+    50%{
+      width: 100%;
+
+    }
+    100%{
+    width: 0px;
+
+    }
+    
+}
+
 
 .projects>a
 {

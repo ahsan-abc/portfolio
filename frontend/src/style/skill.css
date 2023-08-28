@@ -6,6 +6,7 @@
 
 .skills
 {
+   
     display: flex;
     
     justify-content: center;
@@ -15,12 +16,41 @@
 /* loading */
 .skills>p
 {
-    height: 70vh;
-    width: 100%;
-    margin: 35vh;
-    text-align: center;
-    color: rgb(145, 255, 0);
+    
+    width: 200px;
+   margin: 30vh auto;
+   text-align: center;
+   color: chartreuse;
+   
 
+
+
+
+}
+.skills>p>p
+{
+    height: 4px;
+   
+    margin: 2px auto;
+    background-color: chartreuse;
+    animation: rotate 3s infinite;
+    
+}
+
+@keyframes rotate {
+    0%{
+width: 0px;
+
+    }
+    50%{
+      width: 100%;
+
+    }
+    100%{
+    width: 0px;
+
+    }
+    
 }
 /* end loading */
 
@@ -51,6 +81,7 @@ background-color: rgb(188, 230, 18);
   
     margin: 5px 10px;
     height:68px;
+    user-select: none;
  
 
 }
@@ -60,6 +91,7 @@ background-color: rgb(188, 230, 18);
     width: 70%;
     font-size: 0.9em;
     margin: auto;
+    user-select: none;
 }
 
 .skills>li>p
@@ -76,7 +108,9 @@ background-color: rgb(188, 230, 18);
    line-height: 40px;
 }
 
-.skills>li:hover
+
+
+.skills>li:active
 {
     height: fit-content;
     overflow-y: visible;
