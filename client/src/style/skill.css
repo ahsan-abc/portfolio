@@ -1,0 +1,96 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400&display=swap');
+
+
+.skills
+{
+    display: flex;
+    
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+/* loading */
+.skills>p
+{
+    height: 70vh;
+    width: 100%;
+    margin: 35vh;
+    text-align: center;
+    color: rgb(145, 255, 0);
+
+}
+/* end loading */
+
+
+.skills>li
+{
+    display: flex;
+    width: 40%;
+    height: 80px;
+background-color: rgb(188, 230, 18);
+    margin: 20px 10px;
+     width: 500px;
+  align-items: center;
+  justify-content: center;
+    flex-wrap: wrap;
+
+    overflow-y: hidden;
+    transition:background ease 3s;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgb(49, 49, 49);
+
+
+}
+
+
+.skills>li>img
+{
+  
+    margin: 5px 10px;
+    height:68px;
+ 
+
+}
+.skills>li>div
+{
+    font-family: 'Raleway', sans-serif;
+    width: 70%;
+    font-size: 0.9em;
+    margin: auto;
+}
+
+.skills>li>p
+{
+
+    background-color: rgb(0, 0, 0);
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    word-spacing: 20px;
+   text-align: center;
+   line-height: 40px;
+}
+
+.skills>li:hover
+{
+    height: fit-content;
+    overflow-y: visible;
+
+}
+
+
+@media screen and (max-width:800px) {
+
+    .skills>li{
+        margin:15px 0px ;
+        width: 90%;
+
+
+    }
+    
+}

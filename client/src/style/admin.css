@@ -1,0 +1,42 @@
+.admin
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lock , .sub_projects , .sub_skills
+{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 300px;
+    
+}
+
+.lock>input , .sub_projects>input , .sub_skills>input
+{
+    margin: 10px 0 ;
+    border-radius: 10px;
+    height: 25px;
+    padding:0  10px;
+
+    width: 340px;
+    max-width: 70%;
+
+}
+
+
+.sub_projects{
+    display: none;
+    
+}
+.sub_skills{
+    display: none;
+
+}

@@ -1,0 +1,87 @@
+.projects
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* loading */
+.projects>p
+{
+    height: 70vh;
+    width: 100%;
+    margin: 35vh;
+    text-align: center;
+    color: rgb(145, 255, 0);
+
+}
+/* end loading */
+
+.projects>a
+{
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+    border: 2px rgb(0, 0, 0) solid;
+    margin:20px;
+    width:400px;
+    max-width: 90%;
+ 
+   height: 350px;
+   
+  background-color: rgb(188, 230, 18);
+
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+box-shadow: 0px 0px 5px rgb(0, 0, 0);
+font-family:'Courier New', Courier, monospace;
+transition: all ease 0.4s;
+
+}
+
+.projects>a:hover
+{
+    transform: scale(1.04);
+}
+
+
+.projects>a>img
+{
+    border-radius: 8px 8px 0px 0px;
+    width: 100%;
+    min-height: 55%;
+    max-height: 70%;
+  
+}
+
+
+
+.projects>a>li
+{
+    list-style: none;
+    margin: 10px 10px 0px 10px;
+    background-color: aliceblue;
+    padding: 0 10px;
+    border-radius: 10px;
+
+    min-width:60%;
+    max-width: 95%;
+    box-shadow: 2px 0px 0px rgb(255, 255, 255) ,-2px 0px 0px rgb(255, 255, 255),0px 2px 0px rgb(255, 255, 255),0px -2px 0px rgb(255, 255, 255);
+
+    border: 1px black solid;
+    font-size: 1em;
+
+}
+
+
+@media screen and (max-width:800px) {
+.projects>a
+{
+    margin: 20px 10px ;
+}
+    
+}
