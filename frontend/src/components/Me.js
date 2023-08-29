@@ -17,7 +17,7 @@ function Me()
     const [p3, Setp3] = useState(tic)
     const [p1_href, Setp1_href] = useState("https://ahsan-abc.github.io/weather")
     const [p2_href, Setp2_href] = useState("https://ahsan-abc.github.io/calculator")
-    const [p3_href, Setp3_href] = useState("https://ahsan-abc.github.io/tic")
+    const [p3_href, Setp3_href] = useState("https://ahsan-abc.github.io/tic-tac-toe")
 
 
     useEffect(() => {
@@ -91,7 +91,7 @@ function Me()
                    <a href = {p1_href}><div><img alt = "" src = {p1}></img></div></a>
                    <a href = {p2_href}> <div><img alt = "" src = {p2}></img></div></a>
                    <a href = {p3_href}> <div><img alt = "" src = {p3}></img></div></a>
-                   <br></br> 
+            
                    <p><Link to = '/projects'>more...</Link></p>
             </ul>
             </div>
